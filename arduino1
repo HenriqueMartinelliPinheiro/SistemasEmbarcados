@@ -1,24 +1,29 @@
 void setup() {
+  Serial.begin(9600);
   pinMode(13, OUTPUT);
   pinMode(12, OUTPUT);
 }
 
 void loop() {
-  int tempo = 500;
+  int tempo = 1000;
   
   digitalWrite(13, LOW);
   digitalWrite(12, LOW);
+  Serial.println("0");
   delay(tempo);
 
   digitalWrite(13, LOW);
   digitalWrite(12, HIGH);
+  Serial.println("1");
   delay(tempo);
 
   digitalWrite(13, HIGH);
   digitalWrite(12, LOW);
+  Serial.println("2");
   delay(tempo);
 
   digitalWrite(13, HIGH);
   digitalWrite(12, HIGH);
+  Serial.println("3");
   delay(tempo);
 }
