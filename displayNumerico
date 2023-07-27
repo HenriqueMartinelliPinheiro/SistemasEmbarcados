@@ -1,0 +1,141 @@
+void setup() {
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(7, OUTPUT);
+}
+
+void loop() {
+  int tempo = 1000;
+  //0
+
+
+  ascender(13);
+  ascender(12);
+  ascender(11);
+  ascender(10);
+  ascender(9);
+  ascender(8);
+  Serial.println("0");
+  delay(tempo);
+
+  zerar(7);
+
+  //1
+  ascender(12);
+  ascender(11);
+  Serial.println("1");
+  delay(tempo);
+
+  zerar(7);
+
+  //2
+  ascender(13);
+  ascender(12);
+  ascender(10);
+  ascender(9);
+  ascender(7);
+  Serial.println("2");
+  delay(tempo);
+
+  zerar(7);
+
+
+  //3
+  ascender(13);
+  ascender(12);
+  ascender(11);
+  ascender(10);
+  ascender(7);
+  Serial.println("3");
+  delay(tempo);
+
+  zerar(7);
+
+  //4
+  ascender(12);
+  ascender(11);
+  ascender(8);
+  ascender(7);
+  Serial.println("4");
+  delay(tempo);
+
+  zerar(7);
+
+
+  //5
+  ascender(13);
+  ascender(11);
+  ascender(10);
+  ascender(8);
+  ascender(7);
+  Serial.println("5");
+  delay(tempo);
+
+  zerar(7);
+
+  //6
+  ascender(13);
+  ascender(11);
+  ascender(10);
+  ascender(9);
+  ascender(8);
+  ascender(7);
+  Serial.println("6");
+  delay(tempo);
+
+  zerar(7);
+
+  //7
+  ascender(13);
+  ascender(12);
+  ascender(11);
+  Serial.println("7");
+  delay(tempo);
+
+  zerar(7);
+
+  //8
+  ascender(13);
+  ascender(12);
+  ascender(11);
+  ascender(10);
+  ascender(9);
+  ascender(8);
+  ascender(7);
+  Serial.println("8");
+  delay(tempo);
+
+  zerar(7);
+
+  //9
+  ascender(13);
+  ascender(12);
+  ascender(11);
+  ascender(10);
+  ascender(8);
+  ascender(7);
+  Serial.println("9");
+  delay(tempo);
+
+  zerar(7);
+
+}
+
+void apagar(int led) {
+  digitalWrite(led, LOW);
+}
+
+void ascender(int led) {
+  digitalWrite(led, HIGH);
+}
+
+void zerar(int pino) {
+  for (int i = 13;  i>= pino; i--) {
+    apagar(i);
+  }
+}
