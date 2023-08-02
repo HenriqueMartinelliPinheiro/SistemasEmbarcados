@@ -1,0 +1,28 @@
+int contador = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(2,INPUT);
+  pinMode(13,OUTPUT);
+}
+
+void loop() {
+
+  if(digitalRead(2)==HIGH){
+    contador++;
+    while(digitalRead(2)==HIGH){
+      delay(10);
+    }
+
+    Serial.println(contador);
+    if(contador==10){
+      contador=0;
+      digitalWrite(13, HIGH);
+      delay(500);
+    }
+  }
+
+  if(digitalRead(2)==LOW){
+      digitalWrite(13, LOW);
+  }
+}
