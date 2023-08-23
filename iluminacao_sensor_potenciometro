@@ -1,0 +1,21 @@
+int a0 = 0;
+int pot = 0;
+void setup() {
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  a0 = analogRead(A0);
+  pot = analogRead(A1);
+
+  if(a0>=pot){
+    digitalWrite(13, LOW);
+  }
+  if(a0<pot){
+    digitalWrite(13, HIGH);
+  }
+  Serial.print(a0);
+  Serial.println(pot);
+  delay(1000);
+}
