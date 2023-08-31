@@ -1,0 +1,33 @@
+int pot, cont=0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(11, OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+  pinMode(2, INPUT);
+  pinMode(3,INPUT);
+  pinMode(4,INPUT);
+}
+
+void loop() {
+
+  digitalWrite(13, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+
+  if(digitalRead(2)==HIGH){
+    cont++;
+    while(digitalRead(2)==HIGH) delay(10);
+  }
+  if(digitalRead(3)==HIGH){
+    cont++;
+    while(digitalRead(3)==HIGH) delay(10);
+  }
+  if(digitalRead(4)==HIGH){
+    cont++;
+    while(digitalRead(4)==HIGH) delay(10);
+  }
+
+ Serial.println(cont);
+}
