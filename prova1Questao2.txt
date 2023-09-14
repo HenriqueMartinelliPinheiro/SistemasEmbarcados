@@ -1,0 +1,32 @@
+int a0=0, a1=0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(11, OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+  pinMode(2, INPUT);
+  pinMode(3,INPUT);
+  pinMode(4,INPUT);
+}
+
+void loop() {
+  a0=analogRead(A0);
+  a1=analogRead(A1);
+
+  if(digitalRead(2)==HIGH){
+    Serial.println(a0);
+    while(digitalRead(2)==HIGH) delay(10);
+  }
+
+  if(digitalRead(3)==HIGH){
+    Serial.println(a1);
+    while(digitalRead(3)==HIGH) delay(10);
+  }
+
+  if(digitalRead(4)==HIGH){
+    int soma = a0+a1;
+    Serial.println(soma);
+    while(digitalRead(4)==HIGH) delay(10);
+  }
+}
