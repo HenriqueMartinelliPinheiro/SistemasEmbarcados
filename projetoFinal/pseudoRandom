@@ -1,0 +1,58 @@
+int l1 = 18;
+int l2 = 19;
+int l3 = 20;
+int l4 = 21;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(16, OUTPUT);
+  pinMode(17, OUTPUT);
+  pinMode(18, OUTPUT);
+  pinMode(19, OUTPUT);
+  pinMode(20, OUTPUT);
+  pinMode(21, OUTPUT);
+}
+
+void loop() {
+  randomSeed(millis());
+  ligarLeds();
+  delay(500);
+}
+
+void ligarLeds(){
+  digitalWrite(2,random(0,2));
+  digitalWrite(3,random(0,2));
+  digitalWrite(4,random(0,2));
+  digitalWrite(5,random(0,2));
+  digitalWrite(6,random(0,2));
+  digitalWrite(7,random(0,2));
+  digitalWrite(8,random(0,2));
+  digitalWrite(9,random(0,2));
+  digitalWrite(10,random(0,2));
+  digitalWrite(11,random(0,2));
+  digitalWrite(12,random(0,2));
+  digitalWrite(13,random(0,2));
+  digitalWrite(14,random(0,2));
+  digitalWrite(15,random(0,2));
+  digitalWrite(16,random(0,2));
+  digitalWrite(17,random(0,2));
+
+  digitalWrite(18,random(0,2));
+  digitalWrite(19,random(0,2));
+  digitalWrite(20,random(0,2));
+  digitalWrite(21,random(0,2));
+}
