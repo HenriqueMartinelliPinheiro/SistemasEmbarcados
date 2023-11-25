@@ -28,7 +28,6 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(l2, HIGH);
   for(int i=18; i <=21; i++){
     for(int j=2;j <=17; j++){
       ligarLeds(j,i);
